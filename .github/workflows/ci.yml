@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches: ['*']
+  pull_request:
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: 10.0.x
+
+      - name: Restore
+        run: dotnet restore AuthApi.slnx
+
+      - name: Build
+        run: dotnet build --no-restore --configuration Release AuthApi.slnx
+
+      - name: Test
+        run: dotnet test --no-build --configuration Release --verbosity normal tests/AspNet.ApiKeyAuth.Tests/AspNet.ApiKeyAuth.Tests.csproj

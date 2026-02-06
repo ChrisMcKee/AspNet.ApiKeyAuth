@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyTitle>AspNet.ApiKeyAuth</AssemblyTitle>
+    <AssemblyName>AspNet.ApiKeyAuth</AssemblyName>
+    <IsPackable>true</IsPackable>
+    <PackageId>AspNet.ApiKeyAuth</PackageId>
+    <Description>API Key authentication handler for ASP.NET Core</Description>
+    <PackageTags>aspnetcore;authentication;apikey</PackageTags>
+    <PackageLicenseExpression>BSD-3-Clause</PackageLicenseExpression>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+</Project>

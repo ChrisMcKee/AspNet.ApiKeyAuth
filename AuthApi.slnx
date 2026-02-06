@@ -1,0 +1,14 @@
+<Solution>
+  <Folder Name="/.sln/" />
+  <Folder Name="/.sln/actions/">
+    <File Path=".github/workflows/ci.yml" />
+    <File Path=".github/workflows/publish.yml" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/AspNet.ApiKeyAuth/AspNet.ApiKeyAuth.csproj" />
+    <Project Path="src/AspNet.ApiKeyAuthExample/AspNet.ApiKeyAuthExample.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/AspNet.ApiKeyAuth.Tests/AspNet.ApiKeyAuth.Tests.csproj" />
+  </Folder>
+</Solution>
