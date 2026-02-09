@@ -1,0 +1,55 @@
+### YamlMime:ApiPage
+title: Class ApiKeyAuthenticationConfiguration
+body:
+- api1: Class ApiKeyAuthenticationConfiguration
+  id: AspNet_ApiKeyAuth_Configuration_ApiKeyAuthenticationConfiguration
+  src: https://github.com/ChrisMcKee/AspNet.ApiKeyAuth/blob/master/src/AspNet.ApiKeyAuth/Configuration/ApiKeyAuthenticationConfiguration.cs#L3
+  metadata:
+    uid: AspNet.ApiKeyAuth.Configuration.ApiKeyAuthenticationConfiguration
+    commentId: T:AspNet.ApiKeyAuth.Configuration.ApiKeyAuthenticationConfiguration
+- facts:
+  - name: Namespace
+    value:
+      text: AspNet.ApiKeyAuth.Configuration
+      url: AspNet.ApiKeyAuth.Configuration.html
+  - name: Assembly
+    value: AspNet.ApiKeyAuth.dll
+- code: public sealed class ApiKeyAuthenticationConfiguration
+- h4: Inheritance
+- inheritance:
+  - text: object
+    url: https://learn.microsoft.com/dotnet/api/system.object
+  - text: ApiKeyAuthenticationConfiguration
+    url: AspNet.ApiKeyAuth.Configuration.ApiKeyAuthenticationConfiguration.html
+- h4: Inherited Members
+- list:
+  - text: object.Equals(object?)
+    url: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - text: object.Equals(object?, object?)
+    url: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - text: object.GetHashCode()
+    url: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - text: object.GetType()
+    url: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - text: object.ReferenceEquals(object?, object?)
+    url: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - text: object.ToString()
+    url: https://learn.microsoft.com/dotnet/api/system.object.tostring
+- h2: Properties
+- api3: Keys
+  id: AspNet_ApiKeyAuth_Configuration_ApiKeyAuthenticationConfiguration_Keys
+  src: https://github.com/ChrisMcKee/AspNet.ApiKeyAuth/blob/master/src/AspNet.ApiKeyAuth/Configuration/ApiKeyAuthenticationConfiguration.cs#L5
+  metadata:
+    uid: AspNet.ApiKeyAuth.Configuration.ApiKeyAuthenticationConfiguration.Keys
+    commentId: P:AspNet.ApiKeyAuth.Configuration.ApiKeyAuthenticationConfiguration.Keys
+- code: public List<ApiKeyConfig> Keys { get; set; }
+- h4: Property Value
+- parameters:
+  - type:
+    - text: List
+      url: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+    - <
+    - text: ApiKeyConfig
+      url: AspNet.ApiKeyAuth.Configuration.ApiKeyConfig.html
+    - '>'
+languageId: csharp

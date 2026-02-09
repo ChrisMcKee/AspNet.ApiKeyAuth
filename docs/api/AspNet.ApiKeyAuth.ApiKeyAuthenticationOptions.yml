@@ -1,0 +1,79 @@
+### YamlMime:ApiPage
+title: Class ApiKeyAuthenticationOptions
+body:
+- api1: Class ApiKeyAuthenticationOptions
+  id: AspNet_ApiKeyAuth_ApiKeyAuthenticationOptions
+  src: https://github.com/ChrisMcKee/AspNet.ApiKeyAuth/blob/master/src/AspNet.ApiKeyAuth/ApiKeyAuthenticationOptions.cs#L5
+  metadata:
+    uid: AspNet.ApiKeyAuth.ApiKeyAuthenticationOptions
+    commentId: T:AspNet.ApiKeyAuth.ApiKeyAuthenticationOptions
+- facts:
+  - name: Namespace
+    value:
+      text: AspNet.ApiKeyAuth
+      url: AspNet.ApiKeyAuth.html
+  - name: Assembly
+    value: AspNet.ApiKeyAuth.dll
+- code: 'public sealed class ApiKeyAuthenticationOptions : AuthenticationSchemeOptions'
+- h4: Inheritance
+- inheritance:
+  - text: object
+    url: https://learn.microsoft.com/dotnet/api/system.object
+  - text: AuthenticationSchemeOptions
+    url: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication.authenticationschemeoptions
+  - text: ApiKeyAuthenticationOptions
+    url: AspNet.ApiKeyAuth.ApiKeyAuthenticationOptions.html
+- h4: Inherited Members
+- list:
+  - text: AuthenticationSchemeOptions.Validate()
+    url: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication.authenticationschemeoptions.validate#microsoft-aspnetcore-authentication-authenticationschemeoptions-validate
+  - text: AuthenticationSchemeOptions.Validate(string)
+    url: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication.authenticationschemeoptions.validate#microsoft-aspnetcore-authentication-authenticationschemeoptions-validate(system-string)
+  - text: AuthenticationSchemeOptions.ClaimsIssuer
+    url: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication.authenticationschemeoptions.claimsissuer
+  - text: AuthenticationSchemeOptions.Events
+    url: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication.authenticationschemeoptions.events
+  - text: AuthenticationSchemeOptions.EventsType
+    url: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication.authenticationschemeoptions.eventstype
+  - text: AuthenticationSchemeOptions.ForwardDefault
+    url: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication.authenticationschemeoptions.forwarddefault
+  - text: AuthenticationSchemeOptions.ForwardAuthenticate
+    url: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication.authenticationschemeoptions.forwardauthenticate
+  - text: AuthenticationSchemeOptions.ForwardChallenge
+    url: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication.authenticationschemeoptions.forwardchallenge
+  - text: AuthenticationSchemeOptions.ForwardForbid
+    url: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication.authenticationschemeoptions.forwardforbid
+  - text: AuthenticationSchemeOptions.ForwardSignIn
+    url: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication.authenticationschemeoptions.forwardsignin
+  - text: AuthenticationSchemeOptions.ForwardSignOut
+    url: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication.authenticationschemeoptions.forwardsignout
+  - text: AuthenticationSchemeOptions.ForwardDefaultSelector
+    url: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication.authenticationschemeoptions.forwarddefaultselector
+  - text: AuthenticationSchemeOptions.TimeProvider
+    url: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication.authenticationschemeoptions.timeprovider
+  - text: object.Equals(object?)
+    url: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - text: object.Equals(object?, object?)
+    url: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - text: object.GetHashCode()
+    url: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - text: object.GetType()
+    url: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - text: object.ReferenceEquals(object?, object?)
+    url: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - text: object.ToString()
+    url: https://learn.microsoft.com/dotnet/api/system.object.tostring
+- h2: Properties
+- api3: HeaderName
+  id: AspNet_ApiKeyAuth_ApiKeyAuthenticationOptions_HeaderName
+  src: https://github.com/ChrisMcKee/AspNet.ApiKeyAuth/blob/master/src/AspNet.ApiKeyAuth/ApiKeyAuthenticationOptions.cs#L7
+  metadata:
+    uid: AspNet.ApiKeyAuth.ApiKeyAuthenticationOptions.HeaderName
+    commentId: P:AspNet.ApiKeyAuth.ApiKeyAuthenticationOptions.HeaderName
+- code: public string HeaderName { get; set; }
+- h4: Property Value
+- parameters:
+  - type:
+    - text: string
+      url: https://learn.microsoft.com/dotnet/api/system.string
+languageId: csharp

@@ -1,0 +1,32 @@
+### YamlMime:TableOfContent
+- name: AspNet.ApiKeyAuth
+  href: AspNet.ApiKeyAuth.yml
+  items:
+  - name: Classes
+  - name: ApiKeyAuthenticationDefaults
+    href: AspNet.ApiKeyAuth.ApiKeyAuthenticationDefaults.yml
+  - name: ApiKeyAuthenticationHandler
+    href: AspNet.ApiKeyAuth.ApiKeyAuthenticationHandler.yml
+  - name: ApiKeyAuthenticationOptions
+    href: AspNet.ApiKeyAuth.ApiKeyAuthenticationOptions.yml
+  - name: ApiKeyDefaultCredentialsAccessor
+    href: AspNet.ApiKeyAuth.ApiKeyDefaultCredentialsAccessor.yml
+  - name: Interfaces
+  - name: IApiKeyCredentialsAccessor
+    href: AspNet.ApiKeyAuth.IApiKeyCredentialsAccessor.yml
+- name: AspNet.ApiKeyAuth.Configuration
+  href: AspNet.ApiKeyAuth.Configuration.yml
+  items:
+  - name: Classes
+  - name: ApiKeyAuthenticationConfiguration
+    href: AspNet.ApiKeyAuth.Configuration.ApiKeyAuthenticationConfiguration.yml
+  - name: ApiKeyConfig
+    href: AspNet.ApiKeyAuth.Configuration.ApiKeyConfig.yml
+- name: AspNet.ApiKeyAuth.Extensions
+  href: AspNet.ApiKeyAuth.Extensions.yml
+  items:
+  - name: Classes
+  - name: AuthenticationBuilderExtensions
+    href: AspNet.ApiKeyAuth.Extensions.AuthenticationBuilderExtensions.yml
+  - name: AuthorizationExtensions
+    href: AspNet.ApiKeyAuth.Extensions.AuthorizationExtensions.yml

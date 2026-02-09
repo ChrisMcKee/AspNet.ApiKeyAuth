@@ -1,16 +1,41 @@
 name: CI
 
 on:
+  workflow_dispatch:
   push:
-    branches: ['*']
+    branches:
+      - 'master'
+    paths-ignore:
+      - 'docs/**'
+      - '.github/**'
   pull_request:
+    branches:
+      - 'master'
+permissions:
+  contents: read
+  issues: read
+  pull-requests: write
+  checks: write
+
+env:
+  DOTNET_NOLOGO: true
+  DOTNET_GENERATE_ASPNET_CERTIFICATE: false
+  DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
+
 
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
 
     steps:
+      - name: 'Harden Runner'
+        uses: step-security/harden-runner@ec9f2d5744a09debf3a187a3f4f675c53b671911 # v2.13.0
+        with:
+          egress-policy: audit
+
       - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0 # avoid shallow clone so nbgv can do its work.
 
       - uses: actions/setup-dotnet@v5
         with:
@@ -23,4 +48,4 @@ jobs:
         run: dotnet build --no-restore --configuration Release AuthApi.slnx
 
       - name: Test
-        run: dotnet test --no-build --configuration Release --verbosity normal tests/AspNet.ApiKeyAuth.Tests/AspNet.ApiKeyAuth.Tests.csproj
+        run: dotnet test --no-build --configuration Release --verbosity normal tests/AspNet.ApiKeyAuth.Tests/AspNet.ApiKeyAuth.Tests.csproj --collect:"XPlat Code Coverage" --logger junit

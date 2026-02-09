@@ -1,0 +1,17 @@
+### YamlMime:ApiPage
+title: Namespace AspNet.ApiKeyAuth.Extensions
+body:
+- api1: Namespace AspNet.ApiKeyAuth.Extensions
+  id: AspNet_ApiKeyAuth_Extensions
+  metadata:
+    uid: AspNet.ApiKeyAuth.Extensions
+    commentId: N:AspNet.ApiKeyAuth.Extensions
+- h3: Classes
+- parameters:
+  - type:
+      text: AuthenticationBuilderExtensions
+      url: AspNet.ApiKeyAuth.Extensions.AuthenticationBuilderExtensions.html
+  - type:
+      text: AuthorizationExtensions
+      url: AspNet.ApiKeyAuth.Extensions.AuthorizationExtensions.html
+languageId: csharp

@@ -1,0 +1,17 @@
+### YamlMime:ApiPage
+title: Namespace AspNet.ApiKeyAuth.Configuration
+body:
+- api1: Namespace AspNet.ApiKeyAuth.Configuration
+  id: AspNet_ApiKeyAuth_Configuration
+  metadata:
+    uid: AspNet.ApiKeyAuth.Configuration
+    commentId: N:AspNet.ApiKeyAuth.Configuration
+- h3: Classes
+- parameters:
+  - type:
+      text: ApiKeyAuthenticationConfiguration
+      url: AspNet.ApiKeyAuth.Configuration.ApiKeyAuthenticationConfiguration.html
+  - type:
+      text: ApiKeyConfig
+      url: AspNet.ApiKeyAuth.Configuration.ApiKeyConfig.html
+languageId: csharp

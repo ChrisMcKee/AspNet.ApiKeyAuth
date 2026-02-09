@@ -1,0 +1,125 @@
+### YamlMime:ApiPage
+title: Class ApiKeyAuthenticationDefaults
+body:
+- api1: Class ApiKeyAuthenticationDefaults
+  id: AspNet_ApiKeyAuth_ApiKeyAuthenticationDefaults
+  src: https://github.com/ChrisMcKee/AspNet.ApiKeyAuth/blob/master/src/AspNet.ApiKeyAuth/ApiKeyAuthenticationDefaults.cs#L3
+  metadata:
+    uid: AspNet.ApiKeyAuth.ApiKeyAuthenticationDefaults
+    commentId: T:AspNet.ApiKeyAuth.ApiKeyAuthenticationDefaults
+- facts:
+  - name: Namespace
+    value:
+      text: AspNet.ApiKeyAuth
+      url: AspNet.ApiKeyAuth.html
+  - name: Assembly
+    value: AspNet.ApiKeyAuth.dll
+- code: public static class ApiKeyAuthenticationDefaults
+- h4: Inheritance
+- inheritance:
+  - text: object
+    url: https://learn.microsoft.com/dotnet/api/system.object
+  - text: ApiKeyAuthenticationDefaults
+    url: AspNet.ApiKeyAuth.ApiKeyAuthenticationDefaults.html
+- h4: Inherited Members
+- list:
+  - text: object.Equals(object?)
+    url: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - text: object.Equals(object?, object?)
+    url: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - text: object.GetHashCode()
+    url: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - text: object.GetType()
+    url: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - text: object.MemberwiseClone()
+    url: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - text: object.ReferenceEquals(object?, object?)
+    url: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - text: object.ToString()
+    url: https://learn.microsoft.com/dotnet/api/system.object.tostring
+- h2: Fields
+- api3: AuthenticationScheme
+  id: AspNet_ApiKeyAuth_ApiKeyAuthenticationDefaults_AuthenticationScheme
+  src: https://github.com/ChrisMcKee/AspNet.ApiKeyAuth/blob/master/src/AspNet.ApiKeyAuth/ApiKeyAuthenticationDefaults.cs#L5
+  metadata:
+    uid: AspNet.ApiKeyAuth.ApiKeyAuthenticationDefaults.AuthenticationScheme
+    commentId: F:AspNet.ApiKeyAuth.ApiKeyAuthenticationDefaults.AuthenticationScheme
+- code: public const string AuthenticationScheme = "ApiKey"
+- h4: Field Value
+- parameters:
+  - type:
+    - text: string
+      url: https://learn.microsoft.com/dotnet/api/system.string
+- api3: ConfigurationSection
+  id: AspNet_ApiKeyAuth_ApiKeyAuthenticationDefaults_ConfigurationSection
+  src: https://github.com/ChrisMcKee/AspNet.ApiKeyAuth/blob/master/src/AspNet.ApiKeyAuth/ApiKeyAuthenticationDefaults.cs#L8
+  metadata:
+    uid: AspNet.ApiKeyAuth.ApiKeyAuthenticationDefaults.ConfigurationSection
+    commentId: F:AspNet.ApiKeyAuth.ApiKeyAuthenticationDefaults.ConfigurationSection
+- code: public const string ConfigurationSection = "ApiKeyAuthentication"
+- h4: Field Value
+- parameters:
+  - type:
+    - text: string
+      url: https://learn.microsoft.com/dotnet/api/system.string
+- api3: HeaderName
+  id: AspNet_ApiKeyAuth_ApiKeyAuthenticationDefaults_HeaderName
+  src: https://github.com/ChrisMcKee/AspNet.ApiKeyAuth/blob/master/src/AspNet.ApiKeyAuth/ApiKeyAuthenticationDefaults.cs#L6
+  metadata:
+    uid: AspNet.ApiKeyAuth.ApiKeyAuthenticationDefaults.HeaderName
+    commentId: F:AspNet.ApiKeyAuth.ApiKeyAuthenticationDefaults.HeaderName
+- code: public const string HeaderName = "X-Api-Key"
+- h4: Field Value
+- parameters:
+  - type:
+    - text: string
+      url: https://learn.microsoft.com/dotnet/api/system.string
+- api3: PermissionClaimType
+  id: AspNet_ApiKeyAuth_ApiKeyAuthenticationDefaults_PermissionClaimType
+  src: https://github.com/ChrisMcKee/AspNet.ApiKeyAuth/blob/master/src/AspNet.ApiKeyAuth/ApiKeyAuthenticationDefaults.cs#L7
+  metadata:
+    uid: AspNet.ApiKeyAuth.ApiKeyAuthenticationDefaults.PermissionClaimType
+    commentId: F:AspNet.ApiKeyAuth.ApiKeyAuthenticationDefaults.PermissionClaimType
+- code: public const string PermissionClaimType = "permission"
+- h4: Field Value
+- parameters:
+  - type:
+    - text: string
+      url: https://learn.microsoft.com/dotnet/api/system.string
+- api3: ReadPolicy
+  id: AspNet_ApiKeyAuth_ApiKeyAuthenticationDefaults_ReadPolicy
+  src: https://github.com/ChrisMcKee/AspNet.ApiKeyAuth/blob/master/src/AspNet.ApiKeyAuth/ApiKeyAuthenticationDefaults.cs#L10
+  metadata:
+    uid: AspNet.ApiKeyAuth.ApiKeyAuthenticationDefaults.ReadPolicy
+    commentId: F:AspNet.ApiKeyAuth.ApiKeyAuthenticationDefaults.ReadPolicy
+- code: public const string ReadPolicy = "ApiKeyRead"
+- h4: Field Value
+- parameters:
+  - type:
+    - text: string
+      url: https://learn.microsoft.com/dotnet/api/system.string
+- api3: ReadWritePolicy
+  id: AspNet_ApiKeyAuth_ApiKeyAuthenticationDefaults_ReadWritePolicy
+  src: https://github.com/ChrisMcKee/AspNet.ApiKeyAuth/blob/master/src/AspNet.ApiKeyAuth/ApiKeyAuthenticationDefaults.cs#L12
+  metadata:
+    uid: AspNet.ApiKeyAuth.ApiKeyAuthenticationDefaults.ReadWritePolicy
+    commentId: F:AspNet.ApiKeyAuth.ApiKeyAuthenticationDefaults.ReadWritePolicy
+- code: public const string ReadWritePolicy = "ApiKeyReadWrite"
+- h4: Field Value
+- parameters:
+  - type:
+    - text: string
+      url: https://learn.microsoft.com/dotnet/api/system.string
+- api3: WritePolicy
+  id: AspNet_ApiKeyAuth_ApiKeyAuthenticationDefaults_WritePolicy
+  src: https://github.com/ChrisMcKee/AspNet.ApiKeyAuth/blob/master/src/AspNet.ApiKeyAuth/ApiKeyAuthenticationDefaults.cs#L11
+  metadata:
+    uid: AspNet.ApiKeyAuth.ApiKeyAuthenticationDefaults.WritePolicy
+    commentId: F:AspNet.ApiKeyAuth.ApiKeyAuthenticationDefaults.WritePolicy
+- code: public const string WritePolicy = "ApiKeyWrite"
+- h4: Field Value
+- parameters:
+  - type:
+    - text: string
+      url: https://learn.microsoft.com/dotnet/api/system.string
+languageId: csharp

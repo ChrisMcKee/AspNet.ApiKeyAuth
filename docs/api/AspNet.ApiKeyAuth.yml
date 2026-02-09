@@ -1,0 +1,47 @@
+### YamlMime:ApiPage
+title: Namespace AspNet.ApiKeyAuth
+body:
+- api1: Namespace AspNet.ApiKeyAuth
+  id: AspNet_ApiKeyAuth
+  metadata:
+    uid: AspNet.ApiKeyAuth
+    commentId: N:AspNet.ApiKeyAuth
+- h3: Namespaces
+- parameters:
+  - type:
+      text: AspNet.ApiKeyAuth.Configuration
+      url: AspNet.ApiKeyAuth.Configuration.html
+  - type:
+      text: AspNet.ApiKeyAuth.Extensions
+      url: AspNet.ApiKeyAuth.Extensions.html
+- h3: Classes
+- parameters:
+  - type:
+      text: ApiKeyAuthenticationDefaults
+      url: AspNet.ApiKeyAuth.ApiKeyAuthenticationDefaults.html
+  - type:
+      text: ApiKeyAuthenticationHandler
+      url: AspNet.ApiKeyAuth.ApiKeyAuthenticationHandler.html
+    description: Handles API key-based authentication by validating incoming requests against a specified API key.
+  - type:
+      text: ApiKeyAuthenticationOptions
+      url: AspNet.ApiKeyAuth.ApiKeyAuthenticationOptions.html
+  - type:
+      text: ApiKeyDefaultCredentialsAccessor
+      url: AspNet.ApiKeyAuth.ApiKeyDefaultCredentialsAccessor.html
+    description: >-
+      Default implementation of <xref href="AspNet.ApiKeyAuth.IApiKeyCredentialsAccessor" data-throw-if-not-resolved="false"></xref> that loads API keys
+
+      from the application configuration section specified by
+
+      <xref href="AspNet.ApiKeyAuth.ApiKeyAuthenticationDefaults.ConfigurationSection" data-throw-if-not-resolved="false"></xref>.
+- h3: Interfaces
+- parameters:
+  - type:
+      text: IApiKeyCredentialsAccessor
+      url: AspNet.ApiKeyAuth.IApiKeyCredentialsAccessor.html
+    description: >-
+      Defines a contract for retrieving API key credentials.
+
+      Implement this interface to load API keys from a custom data store (e.g., Redis, MongoDB).
+languageId: csharp

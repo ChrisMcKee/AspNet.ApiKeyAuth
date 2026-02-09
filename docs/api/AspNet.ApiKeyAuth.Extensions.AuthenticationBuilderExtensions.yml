@@ -1,0 +1,127 @@
+### YamlMime:ApiPage
+title: Class AuthenticationBuilderExtensions
+body:
+- api1: Class AuthenticationBuilderExtensions
+  id: AspNet_ApiKeyAuth_Extensions_AuthenticationBuilderExtensions
+  src: https://github.com/ChrisMcKee/AspNet.ApiKeyAuth/blob/master/src/AspNet.ApiKeyAuth/Extensions/AuthenticationBuilderExtensions.cs#L6
+  metadata:
+    uid: AspNet.ApiKeyAuth.Extensions.AuthenticationBuilderExtensions
+    commentId: T:AspNet.ApiKeyAuth.Extensions.AuthenticationBuilderExtensions
+- facts:
+  - name: Namespace
+    value:
+      text: AspNet.ApiKeyAuth.Extensions
+      url: AspNet.ApiKeyAuth.Extensions.html
+  - name: Assembly
+    value: AspNet.ApiKeyAuth.dll
+- code: public static class AuthenticationBuilderExtensions
+- h4: Inheritance
+- inheritance:
+  - text: object
+    url: https://learn.microsoft.com/dotnet/api/system.object
+  - text: AuthenticationBuilderExtensions
+    url: AspNet.ApiKeyAuth.Extensions.AuthenticationBuilderExtensions.html
+- h4: Inherited Members
+- list:
+  - text: object.Equals(object?)
+    url: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - text: object.Equals(object?, object?)
+    url: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - text: object.GetHashCode()
+    url: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - text: object.GetType()
+    url: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - text: object.MemberwiseClone()
+    url: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - text: object.ReferenceEquals(object?, object?)
+    url: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - text: object.ToString()
+    url: https://learn.microsoft.com/dotnet/api/system.object.tostring
+- h2: Methods
+- api3: AddApiKey(AuthenticationBuilder)
+  id: AspNet_ApiKeyAuth_Extensions_AuthenticationBuilderExtensions_AddApiKey_Microsoft_AspNetCore_Authentication_AuthenticationBuilder_
+  src: https://github.com/ChrisMcKee/AspNet.ApiKeyAuth/blob/master/src/AspNet.ApiKeyAuth/Extensions/AuthenticationBuilderExtensions.cs#L13
+  metadata:
+    uid: AspNet.ApiKeyAuth.Extensions.AuthenticationBuilderExtensions.AddApiKey(Microsoft.AspNetCore.Authentication.AuthenticationBuilder)
+    commentId: M:AspNet.ApiKeyAuth.Extensions.AuthenticationBuilderExtensions.AddApiKey(Microsoft.AspNetCore.Authentication.AuthenticationBuilder)
+- markdown: Adds API key-based authentication to the authentication builder, using default settings.
+- code: public static AuthenticationBuilder AddApiKey(this AuthenticationBuilder builder)
+- h4: Parameters
+- parameters:
+  - name: builder
+    type:
+    - text: AuthenticationBuilder
+      url: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication.authenticationbuilder
+    description: The <xref href="Microsoft.AspNetCore.Authentication.AuthenticationBuilder" data-throw-if-not-resolved="false"></xref> on which to configure API key authentication.
+- h4: Returns
+- parameters:
+  - type:
+    - text: AuthenticationBuilder
+      url: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication.authenticationbuilder
+    description: An updated <xref href="Microsoft.AspNetCore.Authentication.AuthenticationBuilder" data-throw-if-not-resolved="false"></xref> with API key authentication configured.
+- api3: AddApiKey(AuthenticationBuilder, Action<ApiKeyAuthenticationOptions>)
+  id: AspNet_ApiKeyAuth_Extensions_AuthenticationBuilderExtensions_AddApiKey_Microsoft_AspNetCore_Authentication_AuthenticationBuilder_System_Action_AspNet_ApiKeyAuth_ApiKeyAuthenticationOptions__
+  src: https://github.com/ChrisMcKee/AspNet.ApiKeyAuth/blob/master/src/AspNet.ApiKeyAuth/Extensions/AuthenticationBuilderExtensions.cs#L22
+  metadata:
+    uid: AspNet.ApiKeyAuth.Extensions.AuthenticationBuilderExtensions.AddApiKey(Microsoft.AspNetCore.Authentication.AuthenticationBuilder,System.Action{AspNet.ApiKeyAuth.ApiKeyAuthenticationOptions})
+    commentId: M:AspNet.ApiKeyAuth.Extensions.AuthenticationBuilderExtensions.AddApiKey(Microsoft.AspNetCore.Authentication.AuthenticationBuilder,System.Action{AspNet.ApiKeyAuth.ApiKeyAuthenticationOptions})
+- markdown: Adds API key-based authentication to the authentication builder using the specified configuration.
+- code: public static AuthenticationBuilder AddApiKey(this AuthenticationBuilder builder, Action<ApiKeyAuthenticationOptions> configureOptions)
+- h4: Parameters
+- parameters:
+  - name: builder
+    type:
+    - text: AuthenticationBuilder
+      url: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication.authenticationbuilder
+    description: The <xref href="Microsoft.AspNetCore.Authentication.AuthenticationBuilder" data-throw-if-not-resolved="false"></xref> on which to configure API key authentication.
+  - name: configureOptions
+    type:
+    - text: Action
+      url: https://learn.microsoft.com/dotnet/api/system.action-1
+    - <
+    - text: ApiKeyAuthenticationOptions
+      url: AspNet.ApiKeyAuth.ApiKeyAuthenticationOptions.html
+    - '>'
+    description: An <xref href="System.Action%601" data-throw-if-not-resolved="false"></xref> to configure the <xref href="AspNet.ApiKeyAuth.ApiKeyAuthenticationOptions" data-throw-if-not-resolved="false"></xref>.
+- h4: Returns
+- parameters:
+  - type:
+    - text: AuthenticationBuilder
+      url: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication.authenticationbuilder
+    description: An updated <xref href="Microsoft.AspNetCore.Authentication.AuthenticationBuilder" data-throw-if-not-resolved="false"></xref> with API key authentication configured.
+- api3: AddApiKey(AuthenticationBuilder, string, Action<ApiKeyAuthenticationOptions>)
+  id: AspNet_ApiKeyAuth_Extensions_AuthenticationBuilderExtensions_AddApiKey_Microsoft_AspNetCore_Authentication_AuthenticationBuilder_System_String_System_Action_AspNet_ApiKeyAuth_ApiKeyAuthenticationOptions__
+  src: https://github.com/ChrisMcKee/AspNet.ApiKeyAuth/blob/master/src/AspNet.ApiKeyAuth/Extensions/AuthenticationBuilderExtensions.cs#L32
+  metadata:
+    uid: AspNet.ApiKeyAuth.Extensions.AuthenticationBuilderExtensions.AddApiKey(Microsoft.AspNetCore.Authentication.AuthenticationBuilder,System.String,System.Action{AspNet.ApiKeyAuth.ApiKeyAuthenticationOptions})
+    commentId: M:AspNet.ApiKeyAuth.Extensions.AuthenticationBuilderExtensions.AddApiKey(Microsoft.AspNetCore.Authentication.AuthenticationBuilder,System.String,System.Action{AspNet.ApiKeyAuth.ApiKeyAuthenticationOptions})
+- markdown: Adds API key-based authentication to the authentication builder with the specified authentication scheme and configuration options.
+- code: public static AuthenticationBuilder AddApiKey(this AuthenticationBuilder builder, string authenticationScheme, Action<ApiKeyAuthenticationOptions> configureOptions)
+- h4: Parameters
+- parameters:
+  - name: builder
+    type:
+    - text: AuthenticationBuilder
+      url: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication.authenticationbuilder
+    description: The <xref href="Microsoft.AspNetCore.Authentication.AuthenticationBuilder" data-throw-if-not-resolved="false"></xref> on which to configure API key authentication.
+  - name: authenticationScheme
+    type:
+    - text: string
+      url: https://learn.microsoft.com/dotnet/api/system.string
+    description: The name of the authentication scheme to use.
+  - name: configureOptions
+    type:
+    - text: Action
+      url: https://learn.microsoft.com/dotnet/api/system.action-1
+    - <
+    - text: ApiKeyAuthenticationOptions
+      url: AspNet.ApiKeyAuth.ApiKeyAuthenticationOptions.html
+    - '>'
+    description: A delegate to configure <xref href="AspNet.ApiKeyAuth.ApiKeyAuthenticationOptions" data-throw-if-not-resolved="false"></xref> for the scheme.
+- h4: Returns
+- parameters:
+  - type:
+    - text: AuthenticationBuilder
+      url: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication.authenticationbuilder
+    description: An updated <xref href="Microsoft.AspNetCore.Authentication.AuthenticationBuilder" data-throw-if-not-resolved="false"></xref> with API key authentication configured.
+languageId: csharp

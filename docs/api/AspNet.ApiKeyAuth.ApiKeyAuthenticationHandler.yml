@@ -1,0 +1,145 @@
+### YamlMime:ApiPage
+title: Class ApiKeyAuthenticationHandler
+body:
+- api1: Class ApiKeyAuthenticationHandler
+  id: AspNet_ApiKeyAuth_ApiKeyAuthenticationHandler
+  src: https://github.com/ChrisMcKee/AspNet.ApiKeyAuth/blob/master/src/AspNet.ApiKeyAuth/ApiKeyAuthenticationHandler.cs#L24
+  metadata:
+    uid: AspNet.ApiKeyAuth.ApiKeyAuthenticationHandler
+    commentId: T:AspNet.ApiKeyAuth.ApiKeyAuthenticationHandler
+- facts:
+  - name: Namespace
+    value:
+      text: AspNet.ApiKeyAuth
+      url: AspNet.ApiKeyAuth.html
+  - name: Assembly
+    value: AspNet.ApiKeyAuth.dll
+- markdown: Handles API key-based authentication by validating incoming requests against a specified API key.
+- code: 'public sealed class ApiKeyAuthenticationHandler : AuthenticationHandler<ApiKeyAuthenticationOptions>, IAuthenticationHandler'
+- h4: Inheritance
+- inheritance:
+  - text: object
+    url: https://learn.microsoft.com/dotnet/api/system.object
+  - text: AuthenticationHandler<ApiKeyAuthenticationOptions>
+    url: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication.authenticationhandler-1
+  - text: ApiKeyAuthenticationHandler
+    url: AspNet.ApiKeyAuth.ApiKeyAuthenticationHandler.html
+- h4: Implements
+- list:
+  - text: IAuthenticationHandler
+    url: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication.iauthenticationhandler
+- h4: Inherited Members
+- list:
+  - text: AuthenticationHandler<ApiKeyAuthenticationOptions>.InitializeAsync(AuthenticationScheme, HttpContext)
+    url: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication.authenticationhandler-1.initializeasync
+  - text: AuthenticationHandler<ApiKeyAuthenticationOptions>.AuthenticateAsync()
+    url: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication.authenticationhandler-1.authenticateasync
+  - text: AuthenticationHandler<ApiKeyAuthenticationOptions>.ChallengeAsync(AuthenticationProperties?)
+    url: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication.authenticationhandler-1.challengeasync
+  - text: AuthenticationHandler<ApiKeyAuthenticationOptions>.ForbidAsync(AuthenticationProperties?)
+    url: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication.authenticationhandler-1.forbidasync
+  - text: AuthenticationHandler<ApiKeyAuthenticationOptions>.Scheme
+    url: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication.authenticationhandler-1.scheme
+  - text: AuthenticationHandler<ApiKeyAuthenticationOptions>.Options
+    url: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication.authenticationhandler-1.options
+  - text: object.Equals(object?)
+    url: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - text: object.Equals(object?, object?)
+    url: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - text: object.GetHashCode()
+    url: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - text: object.GetType()
+    url: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - text: object.ReferenceEquals(object?, object?)
+    url: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - text: object.ToString()
+    url: https://learn.microsoft.com/dotnet/api/system.object.tostring
+- h2: Examples
+- markdown: >-
+    The handler can be configured in the ASP.NET Core pipeline via an authentication scheme
+
+    using <code>AddApiKey</code> defined in the <code>AuthenticationBuilderExtensions</code>.
+- h2: Remarks
+- markdown: >-
+    This class derives from <xref href="Microsoft.AspNetCore.Authentication.AuthenticationHandler%601" data-throw-if-not-resolved="false"></xref> and implements custom authentication logic
+
+    for requests carrying API keys in their headers. If the API key in the request matches the pre-configured keys,
+
+    the handler authenticates the request and assigns claims to the authenticated user.
+- h2: Constructors
+- api3: ApiKeyAuthenticationHandler(IOptionsMonitor<ApiKeyAuthenticationOptions>, ILoggerFactory, UrlEncoder, IApiKeyCredentialsAccessor)
+  id: AspNet_ApiKeyAuth_ApiKeyAuthenticationHandler__ctor_Microsoft_Extensions_Options_IOptionsMonitor_AspNet_ApiKeyAuth_ApiKeyAuthenticationOptions__Microsoft_Extensions_Logging_ILoggerFactory_System_Text_Encodings_Web_UrlEncoder_AspNet_ApiKeyAuth_IApiKeyCredentialsAccessor_
+  src: https://github.com/ChrisMcKee/AspNet.ApiKeyAuth/blob/master/src/AspNet.ApiKeyAuth/ApiKeyAuthenticationHandler.cs#L24
+  metadata:
+    uid: AspNet.ApiKeyAuth.ApiKeyAuthenticationHandler.#ctor(Microsoft.Extensions.Options.IOptionsMonitor{AspNet.ApiKeyAuth.ApiKeyAuthenticationOptions},Microsoft.Extensions.Logging.ILoggerFactory,System.Text.Encodings.Web.UrlEncoder,AspNet.ApiKeyAuth.IApiKeyCredentialsAccessor)
+    commentId: M:AspNet.ApiKeyAuth.ApiKeyAuthenticationHandler.#ctor(Microsoft.Extensions.Options.IOptionsMonitor{AspNet.ApiKeyAuth.ApiKeyAuthenticationOptions},Microsoft.Extensions.Logging.ILoggerFactory,System.Text.Encodings.Web.UrlEncoder,AspNet.ApiKeyAuth.IApiKeyCredentialsAccessor)
+- markdown: Handles API key-based authentication by validating incoming requests against a specified API key.
+- code: public ApiKeyAuthenticationHandler(IOptionsMonitor<ApiKeyAuthenticationOptions> options, ILoggerFactory logger, UrlEncoder encoder, IApiKeyCredentialsAccessor credentialsAccessor)
+- h4: Parameters
+- parameters:
+  - name: options
+    type:
+    - text: IOptionsMonitor
+      url: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptionsmonitor-1
+    - <
+    - text: ApiKeyAuthenticationOptions
+      url: AspNet.ApiKeyAuth.ApiKeyAuthenticationOptions.html
+    - '>'
+  - name: logger
+    type:
+    - text: ILoggerFactory
+      url: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.iloggerfactory
+  - name: encoder
+    type:
+    - text: UrlEncoder
+      url: https://learn.microsoft.com/dotnet/api/system.text.encodings.web.urlencoder
+  - name: credentialsAccessor
+    type:
+    - text: IApiKeyCredentialsAccessor
+      url: AspNet.ApiKeyAuth.IApiKeyCredentialsAccessor.html
+- h4: Examples
+- markdown: >-
+    The handler can be configured in the ASP.NET Core pipeline via an authentication scheme
+
+    using <code>AddApiKey</code> defined in the <code>AuthenticationBuilderExtensions</code>.
+- h4: Remarks
+- markdown: >-
+    This class derives from <xref href="Microsoft.AspNetCore.Authentication.AuthenticationHandler%601" data-throw-if-not-resolved="false"></xref> and implements custom authentication logic
+
+    for requests carrying API keys in their headers. If the API key in the request matches the pre-configured keys,
+
+    the handler authenticates the request and assigns claims to the authenticated user.
+- h4: See Also
+- list:
+  - - text: ApiKeyAuthenticationOptions
+      url: AspNet.ApiKeyAuth.ApiKeyAuthenticationOptions.html
+  - - text: AuthenticationBuilderExtensions
+      url: AspNet.ApiKeyAuth.Extensions.AuthenticationBuilderExtensions.html
+- h2: Methods
+- api3: HandleAuthenticateAsync()
+  id: AspNet_ApiKeyAuth_ApiKeyAuthenticationHandler_HandleAuthenticateAsync
+  src: https://github.com/ChrisMcKee/AspNet.ApiKeyAuth/blob/master/src/AspNet.ApiKeyAuth/ApiKeyAuthenticationHandler.cs#L31
+  metadata:
+    uid: AspNet.ApiKeyAuth.ApiKeyAuthenticationHandler.HandleAuthenticateAsync
+    commentId: M:AspNet.ApiKeyAuth.ApiKeyAuthenticationHandler.HandleAuthenticateAsync
+- markdown: Allows derived types to handle authentication.
+- code: protected override Task<AuthenticateResult> HandleAuthenticateAsync()
+- h4: Returns
+- parameters:
+  - type:
+    - text: Task
+      url: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+    - <
+    - text: AuthenticateResult
+      url: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authentication.authenticateresult
+    - '>'
+    description: The <xref href="Microsoft.AspNetCore.Authentication.AuthenticateResult" data-throw-if-not-resolved="false"></xref>.
+- h2: See Also
+- list:
+  - - text: ApiKeyAuthenticationOptions
+      url: AspNet.ApiKeyAuth.ApiKeyAuthenticationOptions.html
+  - - text: AuthenticationBuilderExtensions
+      url: AspNet.ApiKeyAuth.Extensions.AuthenticationBuilderExtensions.html
+languageId: csharp
+metadata:
+  description: Handles API key-based authentication by validating incoming requests against a specified API key.

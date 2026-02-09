@@ -1,0 +1,107 @@
+### YamlMime:ApiPage
+title: Class AuthorizationExtensions
+body:
+- api1: Class AuthorizationExtensions
+  id: AspNet_ApiKeyAuth_Extensions_AuthorizationExtensions
+  src: https://github.com/ChrisMcKee/AspNet.ApiKeyAuth/blob/master/src/AspNet.ApiKeyAuth/Extensions/AuthorizationExtensions.cs#L6
+  metadata:
+    uid: AspNet.ApiKeyAuth.Extensions.AuthorizationExtensions
+    commentId: T:AspNet.ApiKeyAuth.Extensions.AuthorizationExtensions
+- facts:
+  - name: Namespace
+    value:
+      text: AspNet.ApiKeyAuth.Extensions
+      url: AspNet.ApiKeyAuth.Extensions.html
+  - name: Assembly
+    value: AspNet.ApiKeyAuth.dll
+- code: public static class AuthorizationExtensions
+- h4: Inheritance
+- inheritance:
+  - text: object
+    url: https://learn.microsoft.com/dotnet/api/system.object
+  - text: AuthorizationExtensions
+    url: AspNet.ApiKeyAuth.Extensions.AuthorizationExtensions.html
+- h4: Inherited Members
+- list:
+  - text: object.Equals(object?)
+    url: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - text: object.Equals(object?, object?)
+    url: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - text: object.GetHashCode()
+    url: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - text: object.GetType()
+    url: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - text: object.MemberwiseClone()
+    url: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - text: object.ReferenceEquals(object?, object?)
+    url: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - text: object.ToString()
+    url: https://learn.microsoft.com/dotnet/api/system.object.tostring
+- h2: Methods
+- api3: AddApiKeyAuthorization(IServiceCollection)
+  id: AspNet_ApiKeyAuth_Extensions_AuthorizationExtensions_AddApiKeyAuthorization_Microsoft_Extensions_DependencyInjection_IServiceCollection_
+  src: https://github.com/ChrisMcKee/AspNet.ApiKeyAuth/blob/master/src/AspNet.ApiKeyAuth/Extensions/AuthorizationExtensions.cs#L16
+  metadata:
+    uid: AspNet.ApiKeyAuth.Extensions.AuthorizationExtensions.AddApiKeyAuthorization(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+    commentId: M:AspNet.ApiKeyAuth.Extensions.AuthorizationExtensions.AddApiKeyAuthorization(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+- markdown: >-
+    Adds API key authorisation policies to the service collection.
+
+    Configures policies for "read", "write", and "read/write" access
+
+    based on claims in the API key authentication scheme.
+- code: public static IServiceCollection AddApiKeyAuthorization(this IServiceCollection services)
+- h4: Parameters
+- parameters:
+  - name: services
+    type:
+    - text: IServiceCollection
+      url: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection
+- h4: Returns
+- parameters:
+  - type:
+    - text: IServiceCollection
+      url: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection
+    description: The updated IServiceCollection instance with API key authorisation configured.
+- api3: AddApiKeyAuthorization(IServiceCollection, IReadOnlyDictionary<string, Action<AuthorizationPolicyBuilder>>)
+  id: AspNet_ApiKeyAuth_Extensions_AuthorizationExtensions_AddApiKeyAuthorization_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Collections_Generic_IReadOnlyDictionary_System_String_System_Action_Microsoft_AspNetCore_Authorization_AuthorizationPolicyBuilder___
+  src: https://github.com/ChrisMcKee/AspNet.ApiKeyAuth/blob/master/src/AspNet.ApiKeyAuth/Extensions/AuthorizationExtensions.cs#L40
+  metadata:
+    uid: AspNet.ApiKeyAuth.Extensions.AuthorizationExtensions.AddApiKeyAuthorization(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Collections.Generic.IReadOnlyDictionary{System.String,System.Action{Microsoft.AspNetCore.Authorization.AuthorizationPolicyBuilder}})
+    commentId: M:AspNet.ApiKeyAuth.Extensions.AuthorizationExtensions.AddApiKeyAuthorization(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Collections.Generic.IReadOnlyDictionary{System.String,System.Action{Microsoft.AspNetCore.Authorization.AuthorizationPolicyBuilder}})
+- markdown: >-
+    Adds API key authorisation policies to the service collection.
+
+    Configures custom policies defined in the provided dictionary based on the API key authentication scheme.
+- code: public static IServiceCollection AddApiKeyAuthorization(this IServiceCollection services, IReadOnlyDictionary<string, Action<AuthorizationPolicyBuilder>> policies)
+- h4: Parameters
+- parameters:
+  - name: services
+    type:
+    - text: IServiceCollection
+      url: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection
+    description: ''
+  - name: policies
+    type:
+    - text: IReadOnlyDictionary
+      url: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+    - <
+    - text: string
+      url: https://learn.microsoft.com/dotnet/api/system.string
+    - ','
+    - " "
+    - text: Action
+      url: https://learn.microsoft.com/dotnet/api/system.action-1
+    - <
+    - text: AuthorizationPolicyBuilder
+      url: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.authorization.authorizationpolicybuilder
+    - '>'
+    - '>'
+    description: A dictionary containing policy names as keys and actions to configure each policy as values.
+- h4: Returns
+- parameters:
+  - type:
+    - text: IServiceCollection
+      url: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection
+    description: The updated IServiceCollection instance with the specified API key authorisation policies configured.
+languageId: csharp

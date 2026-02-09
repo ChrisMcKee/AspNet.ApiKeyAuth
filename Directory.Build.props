@@ -1,0 +1,22 @@
+<Project>
+  <PropertyGroup>
+    <Authors>Chris McKee</Authors>
+    <Copyright>2024-$([System.DateTime]::Now.Year) Chris McKee</Copyright>
+    <Summary>A flexible API Key Authentication package</Summary>
+    <Description>Simple validation for your api for when oauth is overkill</Description>
+
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/ChrisMcKee/AspNet.ApiKeyAuth/</RepositoryUrl>
+    <RepositoryRoot>$(MSBuildThisFileDirectory)</RepositoryRoot>
+    <PackageProjectUrl>https://apikey-auth.chrismckee.uk/</PackageProjectUrl>
+    <PackageReleaseNotes>https://github.com/ChrisMcKee/AspNet.ApiKeyAuth/</PackageReleaseNotes>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <PackageLicenseExpression>BSD-3-Clause</PackageLicenseExpression>
+    <PackageTags>api-key,key,authentication,api,auth</PackageTags>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+  </PropertyGroup>
+</Project>

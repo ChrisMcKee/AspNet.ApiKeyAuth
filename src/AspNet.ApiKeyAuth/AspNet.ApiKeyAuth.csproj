@@ -8,9 +8,6 @@
     <AssemblyName>AspNet.ApiKeyAuth</AssemblyName>
     <IsPackable>true</IsPackable>
     <PackageId>AspNet.ApiKeyAuth</PackageId>
-    <Description>API Key authentication handler for ASP.NET Core</Description>
-    <PackageTags>aspnetcore;authentication;apikey</PackageTags>
-    <PackageLicenseExpression>BSD-3-Clause</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>

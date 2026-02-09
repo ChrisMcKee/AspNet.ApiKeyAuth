@@ -1,0 +1,60 @@
+{
+    "$schema": "https://raw.githubusercontent.com/dotnet/docfx/main/schemas/docfx.schema.json",
+    "metadata": [
+        {
+            "src": [
+                {
+                    "src": "../src",
+                    "files": [
+                        "**/AspNet.ApiKeyAuth/*.csproj"
+                    ]
+                }
+            ],
+            "dest": "api",
+            "outputFormat": "apiPage"
+        }
+    ],
+    "build": {
+        "content": [
+            {
+                "files": [
+                    "**/*.{md,yml}"
+                ],
+                "exclude": [
+                    "_site/**"
+                ]
+            }
+        ],
+        "resource": [
+            {
+                "files": [
+                    "**/images/**",
+                    "**/media/**"
+                ]
+            },
+            {
+                "files": [
+                    "favicon.ico",
+                    "favicon.png",
+                    "docicon.png"
+                ]
+            }
+        ],
+        "output": "_site",
+        "template": [
+            "default",
+            "modern",
+            "template"
+        ],
+        "globalMetadata": {
+            "_appName": "AspNet.ApiKeyAuth",
+            "_appTitle": "AspNet.ApiKeyAuth Documentation",
+            "_appFooter": "&copy; Chris McKee",
+            "_enableSearch": true,
+            "_enableNewTab": "true",
+            "_appFaviconPath": "favicon.png",
+            "_appLogoPath": "favicon.png",
+            "pdf": false
+        }
+    }
+}
