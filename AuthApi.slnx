@@ -6,6 +6,7 @@
     <File Path=".github/workflows/publish.yml" />
   </Folder>
   <Folder Name="/src/">
+    <Project Path="src/AspNet.ApiKeyAuth.RateLimit/AspNet.ApiKeyAuth.RateLimit.csproj" />
     <Project Path="src/AspNet.ApiKeyAuth/AspNet.ApiKeyAuth.csproj" />
     <Project Path="src/AspNet.ApiKeyAuthExample/AspNet.ApiKeyAuthExample.csproj" />
   </Folder>

@@ -22,8 +22,7 @@ public sealed class ApiKeyDefaultCredentialsAccessor : IApiKeyCredentialsAccesso
 
     public Task<ApiKeyConfig?> GetApiKeyAsync(string apiKey, CancellationToken cancellationToken)
     {
-        var keyConfig = _keys.Find(k =>
-            string.Equals(k.Key, apiKey, StringComparison.Ordinal));
+        var keyConfig = _keys.Find(k => string.Equals(k.Key, apiKey, StringComparison.Ordinal));
 
         return Task.FromResult(keyConfig);
     }

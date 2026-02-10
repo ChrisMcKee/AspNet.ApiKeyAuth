@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Reference Include="Microsoft.AspNetCore.RateLimiting">
+        <HintPath>..\..\..\..\..\..\..\usr\lib\dotnet\shared\Microsoft.AspNetCore.App\10.0.1\Microsoft.AspNetCore.RateLimiting.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\AspNet.ApiKeyAuth\AspNet.ApiKeyAuth.csproj" />
+    </ItemGroup>
+
+</Project>
