@@ -1,8 +1,9 @@
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.Extensions.Configuration;
 
-namespace AspNet.ApiKeyAuth.Tests.Infrastructure;
+namespace Tests.Infrastructure;
 
 public class TestWebApplicationFactory : WebApplicationFactory<Program>
 {
@@ -10,7 +11,7 @@ public class TestWebApplicationFactory : WebApplicationFactory<Program>
     {
         builder.ConfigureAppConfiguration((_, config) =>
         {
-            config.AddInMemoryCollection(new Dictionary<string, string?>
+            config.AddInMemoryCollection(new Dictionary<string, string>
             {
                 ["ApiKeyAuthentication:Keys:0:Key"] = "test-read-key",
                 ["ApiKeyAuthentication:Keys:0:Name"] = "TestReader",

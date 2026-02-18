@@ -1,7 +1,9 @@
 using System.Net;
-using AspNet.ApiKeyAuth.Tests.Infrastructure;
+using System.Net.Http;
+using System.Threading.Tasks;
+using Tests.Infrastructure;
 
-namespace AspNet.ApiKeyAuth.Tests;
+namespace Tests;
 
 public class ApiKeyAuthenticationTests(TestWebApplicationFactory factory)
     : IClassFixture<TestWebApplicationFactory>
@@ -11,7 +13,7 @@ public class ApiKeyAuthenticationTests(TestWebApplicationFactory factory)
     [Fact]
     public async Task PublicEndpoint_NoKey_Returns200()
     {
-        var response = await _client.GetAsync("/public");
+        var response = await _client.GetAsync("/public", TestContext.Current.CancellationToken);
         Assert.Equal(HttpStatusCode.OK, response.StatusCode);
     }
 
@@ -21,7 +23,7 @@ public class ApiKeyAuthenticationTests(TestWebApplicationFactory factory)
         var request = new HttpRequestMessage(HttpMethod.Get, "/data");
         request.Headers.Add("X-Api-Key", "test-read-key");
 
-        var response = await _client.SendAsync(request);
+        var response = await _client.SendAsync(request, TestContext.Current.CancellationToken);
         Assert.Equal(HttpStatusCode.OK, response.StatusCode);
     }
 
@@ -31,14 +33,14 @@ public class ApiKeyAuthenticationTests(TestWebApplicationFactory factory)
         var request = new HttpRequestMessage(HttpMethod.Get, "/data");
         request.Headers.Add("X-Api-Key", "test-readwrite-key");
 
-        var response = await _client.SendAsync(request);
+        var response = await _client.SendAsync(request, TestContext.Current.CancellationToken);
         Assert.Equal(HttpStatusCode.OK, response.StatusCode);
     }
 
     [Fact]
     public async Task GetData_NoKey_Returns401()
     {
-        var response = await _client.GetAsync("/data");
+        var response = await _client.GetAsync("/data", TestContext.Current.CancellationToken);
         Assert.Equal(HttpStatusCode.Unauthorized, response.StatusCode);
     }
 
@@ -48,7 +50,7 @@ public class ApiKeyAuthenticationTests(TestWebApplicationFactory factory)
         var request = new HttpRequestMessage(HttpMethod.Get, "/data");
         request.Headers.Add("X-Api-Key", "bogus-key");
 
-        var response = await _client.SendAsync(request);
+        var response = await _client.SendAsync(request, TestContext.Current.CancellationToken);
         Assert.Equal(HttpStatusCode.Unauthorized, response.StatusCode);
     }
 
@@ -58,7 +60,7 @@ public class ApiKeyAuthenticationTests(TestWebApplicationFactory factory)
         var request = new HttpRequestMessage(HttpMethod.Post, "/data");
         request.Headers.Add("X-Api-Key", "test-read-key");
 
-        var response = await _client.SendAsync(request);
+        var response = await _client.SendAsync(request, TestContext.Current.CancellationToken);
         Assert.Equal(HttpStatusCode.Forbidden, response.StatusCode);
     }
 
@@ -68,7 +70,7 @@ public class ApiKeyAuthenticationTests(TestWebApplicationFactory factory)
         var request = new HttpRequestMessage(HttpMethod.Post, "/data");
         request.Headers.Add("X-Api-Key", "test-readwrite-key");
 
-        var response = await _client.SendAsync(request);
+        var response = await _client.SendAsync(request, TestContext.Current.CancellationToken);
         Assert.Equal(HttpStatusCode.Created, response.StatusCode);
     }
 
@@ -78,7 +80,7 @@ public class ApiKeyAuthenticationTests(TestWebApplicationFactory factory)
         var request = new HttpRequestMessage(HttpMethod.Get, "/admin");
         request.Headers.Add("X-Api-Key", "test-read-key");
 
-        var response = await _client.SendAsync(request);
+        var response = await _client.SendAsync(request, TestContext.Current.CancellationToken);
         Assert.Equal(HttpStatusCode.Forbidden, response.StatusCode);
     }
 
@@ -88,7 +90,7 @@ public class ApiKeyAuthenticationTests(TestWebApplicationFactory factory)
         var request = new HttpRequestMessage(HttpMethod.Get, "/admin");
         request.Headers.Add("X-Api-Key", "test-readwrite-key");
 
-        var response = await _client.SendAsync(request);
+        var response = await _client.SendAsync(request, TestContext.Current.CancellationToken);
         Assert.Equal(HttpStatusCode.OK, response.StatusCode);
     }
 }

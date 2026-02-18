@@ -11,8 +11,4 @@
     <ProjectReference Include="..\AspNet.ApiKeyAuth\AspNet.ApiKeyAuth.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="System.Threading.RateLimiting" Version="10.0.2" />
-  </ItemGroup>
-
 </Project>

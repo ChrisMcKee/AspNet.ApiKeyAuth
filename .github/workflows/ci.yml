@@ -1,4 +1,4 @@
-name: CI
+name: CI Build
 
 on:
   workflow_dispatch:
@@ -8,9 +8,7 @@ on:
     paths-ignore:
       - 'docs/**'
       - '.github/**'
-  pull_request:
-    branches:
-      - 'master'
+
 permissions:
   contents: read
   issues: read
@@ -29,23 +27,27 @@ jobs:
 
     steps:
       - name: 'Harden Runner'
-        uses: step-security/harden-runner@ec9f2d5744a09debf3a187a3f4f675c53b671911 # v2.13.0
+        uses: step-security/harden-runner@5ef0c079ce82195b2a36a210272d6b661572d83e # v2.14.2
         with:
           egress-policy: audit
 
-      - uses: actions/checkout@v6
+      - name: 'Checkout'
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
           fetch-depth: 0 # avoid shallow clone so nbgv can do its work.
 
-      - uses: actions/setup-dotnet@v5
+      - name: 'Setup .NET SDK'
+        uses: actions/setup-dotnet@baa11fbfe1d6520db94683bd5c7a3818018e4309 # v5.1.0
         with:
           dotnet-version: 10.0.x
 
-      - name: Restore
-        run: dotnet restore AuthApi.slnx
+      - name: 'Restore external dependencies'
+        run: dotnet restore
 
-      - name: Build
-        run: dotnet build --no-restore --configuration Release AuthApi.slnx
+      - name: 'Build'
+        id: build
+        run: dotnet build --configuration Debug --no-restore
 
-      - name: Test
-        run: dotnet test --no-build --configuration Release --verbosity normal tests/AspNet.ApiKeyAuth.Tests/AspNet.ApiKeyAuth.Tests.csproj --logger junit
+      - name: 'Test'
+        id: test
+        run: dotnet run --configuration Release --coverage --coverage-output-format cobertura --report-github --project tests/AspNet.ApiKeyAuth.Tests/AspNet.ApiKeyAuth.Tests.csproj

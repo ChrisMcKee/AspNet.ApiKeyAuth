@@ -1,0 +1,29 @@
+<Project>
+  <PropertyGroup>
+    <Authors>Chris McKee</Authors>
+    <Copyright>2006-$([System.DateTime]::Now.Year) Chris McKee</Copyright>
+    <Summary>Simple API-Key authentication extension</Summary>
+    <Description>Allows the use of config to define api-keys with their claims; or define your own api storage using the interface</Description>
+
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/ChrisMcKee/AspNet.ApiKeyAuth/</RepositoryUrl>
+    <RepositoryRoot>$(MSBuildThisFileDirectory)</RepositoryRoot>
+    <PackageProjectUrl>https://github.com/ChrisMcKee/AspNet.ApiKeyAuth/</PackageProjectUrl>
+    <PackageReleaseNotes>https://github.com/ChrisMcKee/AspNet.ApiKeyAuth/</PackageReleaseNotes>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageTags>authentication,aspnet,apikey</PackageTags>
+<!--    <PackageIcon>logo.png</PackageIcon>-->
+<!--    <PackageReadmeFile>readme.md</PackageReadmeFile>-->
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(GITHUB_ACTIONS)' == 'true'">
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+  </PropertyGroup>
+
+</Project>

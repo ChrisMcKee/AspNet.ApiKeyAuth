@@ -8,6 +8,16 @@
     <AssemblyName>AspNet.ApiKeyAuth</AssemblyName>
     <IsPackable>true</IsPackable>
     <PackageId>AspNet.ApiKeyAuth</PackageId>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Title>AspNet.ApiKeyAuth</Title>
+    <Copyright>2024 Chris McKee</Copyright>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>../../authapi.snk</AssemblyOriginatorKeyFile>
+    <PublicSign Condition="'$(OS)' != 'Windows_NT'">true</PublicSign>
+    <DelaySign>true</DelaySign>
+    <SignAssembly>true</SignAssembly>
   </PropertyGroup>
 
   <ItemGroup>
