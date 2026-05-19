@@ -4,7 +4,15 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <AssemblyTitle>AspNet.ApiKeyAuth.RateLimit</AssemblyTitle>
+    <AssemblyName>AspNet.ApiKeyAuth.RateLimit</AssemblyName>
+    <IsPackable>true</IsPackable>
+    <PackageId>AspNet.ApiKeyAuth.RateLimit</PackageId>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Title>AspNet.ApiKeyAuth.RateLimit</Title>
+    <Copyright>2024 Chris McKee</Copyright>
   </PropertyGroup>
+
 
   <ItemGroup>
     <FrameworkReference Include="Microsoft.AspNetCore.App"/>
@@ -13,7 +21,7 @@
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>../../authapi.snk</AssemblyOriginatorKeyFile>
     <PublicSign Condition="'$(OS)' != 'Windows_NT'">true</PublicSign>
-    <DelaySign>true</DelaySign>
+    <DelaySign Condition="'$(OS)' == 'Windows_NT'">true</DelaySign>
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
 

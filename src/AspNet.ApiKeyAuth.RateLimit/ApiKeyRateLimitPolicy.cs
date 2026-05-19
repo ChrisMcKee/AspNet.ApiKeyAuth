@@ -16,13 +16,12 @@ public record ApiKeyRateLimitOptions
 
 public class ApiKeyRateLimitPolicy : IRateLimiterPolicy<string>
 {
-    private Func<OnRejectedContext, CancellationToken, ValueTask>? _onRejected;
     private readonly ApiKeyRateLimitOptions _options;
 
     public ApiKeyRateLimitPolicy(ILogger<ApiKeyRateLimitPolicy> logger,
         IOptions<ApiKeyRateLimitOptions> options)
     {
-        _onRejected = (ctx, token) =>
+        OnRejected = (ctx, token) =>
         {
             ctx.HttpContext.Response.StatusCode = StatusCodes.Status429TooManyRequests;
             logger.LogWarning($"Request rejected by {nameof(ApiKeyRateLimitPolicy)}");
@@ -31,7 +30,7 @@ public class ApiKeyRateLimitPolicy : IRateLimiterPolicy<string>
         _options = options.Value;
     }
 
-    public Func<OnRejectedContext, CancellationToken, ValueTask>? OnRejected => _onRejected;
+    public Func<OnRejectedContext, CancellationToken, ValueTask>? OnRejected { get; }
 
     public RateLimitPartition<string> GetPartition(HttpContext httpContext)
     {

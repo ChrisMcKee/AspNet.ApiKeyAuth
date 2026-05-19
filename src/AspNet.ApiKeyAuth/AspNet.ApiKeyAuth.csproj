@@ -16,7 +16,7 @@
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>../../authapi.snk</AssemblyOriginatorKeyFile>
     <PublicSign Condition="'$(OS)' != 'Windows_NT'">true</PublicSign>
-    <DelaySign>true</DelaySign>
+    <DelaySign Condition="'$(OS)' == 'Windows_NT'">true</DelaySign>
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
 
