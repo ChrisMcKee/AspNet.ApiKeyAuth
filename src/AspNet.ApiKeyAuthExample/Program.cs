@@ -3,7 +3,6 @@ using System.Threading.RateLimiting;
 using AspNet.ApiKeyAuth;
 using AspNet.ApiKeyAuth.Extensions;
 using AspNet.ApiKeyAuth.RateLimit;
-using Microsoft.AspNetCore.RateLimiting;
 
 //https://learn.microsoft.com/en-us/aspnet/core/performance/rate-limit?view=aspnetcore-10.0#token
 
@@ -13,11 +12,20 @@ builder.Services
     .AddAuthentication(ApiKeyAuthenticationDefaults.AuthenticationScheme)
     .AddApiKey();
 
+builder.Services
+    .AddOptions<ApiKeyRateLimitOptions>()
+    .Bind(builder.Configuration.GetSection(ApiKeyRateLimitOptions.SectionName))
+    .Validate(options => options.PermitLimit > 0, $"{nameof(ApiKeyRateLimitOptions.PermitLimit)} must be greater than 0.")
+    .Validate(options => options.QueueLimit >= 0, $"{nameof(ApiKeyRateLimitOptions.QueueLimit)} must be greater than or equal to 0.")
+    .Validate(options => options.Window > 0, $"{nameof(ApiKeyRateLimitOptions.Window)} must be greater than 0.")
+    .Validate(options => options.SegmentsPerWindow > 0, $"{nameof(ApiKeyRateLimitOptions.SegmentsPerWindow)} must be greater than 0.")
+    .ValidateOnStart();
+
 builder.Services.AddApiKeyAuthorization();
 const string apiRateLimitKey = "api";
-builder.Services.AddRateLimiter(_=>
+builder.Services.AddRateLimiter(rateLimiterOptions =>
 {
-    _.OnRejected = async (context, cancellationToken) =>
+    rateLimiterOptions.OnRejected = async (context, cancellationToken) =>
     {
         if (context.Lease.TryGetMetadata(MetadataName.RetryAfter, out var retryAfter))
         {
@@ -28,7 +36,7 @@ builder.Services.AddRateLimiter(_=>
         await context.HttpContext.Response.WriteAsync("Too many requests. Please try again later.", cancellationToken);
     };
 
-    _.AddPolicy<string, ApiKeyRateLimitPolicy>(apiRateLimitKey);
+    rateLimiterOptions.AddPolicy<string, ApiKeyRateLimitPolicy>(apiRateLimitKey);
 });
 
 
