@@ -19,9 +19,8 @@
   </ItemGroup>
 
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>../../authapi.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>..\..\apiauthkey.snk</AssemblyOriginatorKeyFile>
     <PublicSign Condition="'$(OS)' != 'Windows_NT'">true</PublicSign>
-    <DelaySign Condition="'$(OS)' == 'Windows_NT'">true</DelaySign>
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
 

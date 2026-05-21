@@ -12,6 +12,7 @@
     <DebugType>Full</DebugType>
     <Platforms>AnyCPU</Platforms>
   </PropertyGroup>
+
   <PropertyGroup>
     <IsTestProject>true</IsTestProject>
     <IsPublishable>False</IsPublishable>
@@ -28,23 +29,23 @@
     <PackageReference Include="xunit.runner.visualstudio" Version="3.1.5">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.Testing.Extensions.CodeCoverage" Version="18.4.1" />
-    <PackageReference Include="Microsoft.Testing.Extensions.CrashDump" Version="2.1.0" />
-    <PackageReference Include="Microsoft.Testing.Extensions.HangDump" Version="2.1.0" />
-    <PackageReference Include="Microsoft.Testing.Extensions.TrxReport" Version="2.1.0" />
-    <PackageReference Include="Microsoft.Testing.Platform" Version="2.1.0" />
-    <PackageReference Include="GitHubActionsTestLogger" Version="3.0.1" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="10.0.3" />
+    <PackageReference Include="Microsoft.Testing.Extensions.CodeCoverage" Version="18.4.1"/>
+    <PackageReference Include="Microsoft.Testing.Extensions.CrashDump" Version="2.1.0"/>
+    <PackageReference Include="Microsoft.Testing.Extensions.HangDump" Version="2.1.0"/>
+    <PackageReference Include="Microsoft.Testing.Extensions.TrxReport" Version="2.1.0"/>
+    <PackageReference Include="Microsoft.Testing.Platform" Version="2.1.0"/>
+    <PackageReference Include="GitHubActionsTestLogger" Version="3.0.1"/>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.4"/>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="10.0.3"/>
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\AspNet.ApiKeyAuth\AspNet.ApiKeyAuth.csproj" />
-    <ProjectReference Include="..\..\src\AspNet.ApiKeyAuthExample\AspNet.ApiKeyAuthExample.csproj" />
+    <ProjectReference Include="..\..\src\AspNet.ApiKeyAuth\AspNet.ApiKeyAuth.csproj"/>
+    <ProjectReference Include="..\..\src\AspNet.ApiKeyAuthExample\AspNet.ApiKeyAuthExample.csproj"/>
   </ItemGroup>
 
   <ItemGroup>
-    <Using Include="Xunit" />
+    <Using Include="Xunit"/>
   </ItemGroup>
 
 </Project>
